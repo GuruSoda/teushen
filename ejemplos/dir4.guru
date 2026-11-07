@@ -1,0 +1,14 @@
+var("raiz", "D:\\Desarrollo\\Librerias\\")
+
+var("total_archivos", "0")
+var("total_directorios", "0")
+
+dir.init(raiz, "*.*")
+
+while (dir.extraer()) {
+ 	if (dir.es_dir()) total_directorios=inc(total_directorios)
+	if (dir.es_archivo()) total_archivos=inc(total_archivos)
+}
+
+println("Total Directorios:", total_directorios)
+println("Total Archivos:", total_archivos)

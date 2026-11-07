@@ -1,0 +1,8 @@
+var("raiz", "D:\\Desarrollo\\Librerias\\")
+dir.listar_recursivo(raiz, "*.*")
+
+do {
+	print(dir.nombre())
+	if (dir.es_dir()) println("\\")
+	else println(" -> ", dir.fechahora())
+} while (dir.siguiente())

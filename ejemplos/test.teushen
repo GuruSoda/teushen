@@ -1,0 +1,22 @@
+println(sis.fecha("%H%:%M%:%S% %AA%.%MM%.%DD%"))
+
+println ("Listado de C:\\")
+
+dir.listar("c:\\", "*.*")
+
+# while (dir.siguiente()) println(dir.nombre(), " - ", dir.tamanio(), " - ", dir.epoc(), " - ", sis.fecha("%H%:%M%:%S% %dd%.%mm%.%aa%", dir.epoc()))
+
+while (dir.siguiente()) {
+	if (dir.es_dir())
+		println(dir.nombre(), "\\")
+	else
+		println(dir.nombre())
+}
+
+println("teminado")
+
+if (lt("200", "100")) {
+	println("iguales")
+} else {
+	println("NO iguales")
+}

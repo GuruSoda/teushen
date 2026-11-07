@@ -1,0 +1,7 @@
+if (prot.open("balanceador3", "28923")) {
+	prot.cmd_multilinea("cache")
+	while (prot.linea()) {
+		println(prot.respuesta())
+	}
+	prot.cmd("salir")
+} else { println(prot.error())}

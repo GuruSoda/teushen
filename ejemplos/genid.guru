@@ -1,0 +1,9 @@
+println (genid.id("uno"))
+println (genid.id("dos"))
+println (genid.id("nada"))
+
+genid.listar()
+
+while (genid.++()) {
+	println("Llave:", genid.llave(), " - Valor:", genid.valor())
+}

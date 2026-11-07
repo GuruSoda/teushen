@@ -1,0 +1,20 @@
+var("consulta", "
+select d.nombre || a.nombre from catalogo c, archivo a,directorio d 
+where c.id_archivo = a.id_archivo and c.id_directorio = d.id_directorio and 
+      a.nombre like '%hpp'
+")
+
+if (sql.abrir("librerias.sqlite")) {
+	var ("total","0")
+	if (sql.ejecutar(consulta)) {
+		total=inc(total)
+		println("Resultado: ", sql.columna("0"))
+		while (sql.extraer()) {
+			total=inc(total)
+			println("Resultado: ", sql.columna("0"))
+		}
+	println("Total registros ", total)
+	}
+} else { 
+	print("Error abriendo bd")
+}

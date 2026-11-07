@@ -1,0 +1,8 @@
+var("raiz", "D:\\Desarrollo\\Librerias\\")
+dir.listar(raiz, "*.*")
+
+do {
+	print(dir.nombre())
+	if (dir.es_dir()) println("\\")
+	else println(" -> ", dir.fechahora() ," -> ", hash.sha1.archivo(str.concat(raiz, dir.nombre())))
+} while (dir.siguiente())

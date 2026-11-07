@@ -1,0 +1,8 @@
+if (prot.open("localhost", "19511")) {
+	print(prot.cmd_linea("valor cpu1"))
+#	println(prot.respuesta())
+#	while (prot.linea()) {
+#		println(prot.respuesta())
+#	}
+	prot.cmd("salir")
+} else { println(prot.error())}

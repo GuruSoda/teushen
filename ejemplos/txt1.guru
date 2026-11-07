@@ -1,0 +1,7 @@
+txt.openr("procesos-20130311233002.log")
+
+while (txt.read()) {
+	token.extraer(ur(), "|")
+
+	println(token.token("1"))
+}

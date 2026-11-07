@@ -1,0 +1,12 @@
+var("raiz", "D:\\Desarrollo\\Librerias\\")
+var("total_archivos", "0")
+var("total_directorios", "0")
+dir.listar_recursivo(raiz, "*.*")
+
+do {
+#	println(dir.directorio(), dir.nombre())
+# 	if (dir.es_dir()) println("\\")
+	total_archivos=inc(total_archivos)
+} while (dir.siguiente())
+
+println("Total Archivos:", total_archivos)

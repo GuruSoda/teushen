@@ -1,0 +1,6 @@
+sql.abrir("librerias.sqlite")
+
+sql.ejecutar("select nombre from archivo where id_archivo=975") 
+
+println("Resultado: ", sql.columna("0"))
+
